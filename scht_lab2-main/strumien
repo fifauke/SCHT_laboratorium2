@@ -1,0 +1,2 @@
+#miasto1,miasto2,bw,acceptable_delay,acceptable_loss,packet_size,protocol
+Warszawa,Berlin,10,4,15,1400,udp,

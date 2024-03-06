@@ -1,0 +1,16 @@
+Warszawa,Berlin,730,2,2
+Warszawa,Praga,730,3,2
+Warszawa,Wieden,786,4,2
+Berlin,Kopenhaga,502,3,2
+Berlin,Paryz,1241,4,2
+Paryz,Londyn,485,3,2
+Paryz,Madryt,1491,4,2
+Wieden,Budapeszt,303,3,2
+Wieden,Rzym,1082,4,2
+Warszawa,Budapeszt,771,5,3
+Budapeszt,Rzym,1143,4,3
+Rzym,Madryt,1930,4,3
+Madryt,Londyn,1792,4,3
+Londyn,Kopenhaga,1356,4,3
+Kopenhaga,Warszawa,953,4,6
+Praga,Madryt,2514,3,5

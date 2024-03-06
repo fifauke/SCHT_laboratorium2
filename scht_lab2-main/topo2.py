@@ -1,0 +1,56 @@
+from mininet.topo import Topo
+
+
+class MyTopo(Topo):
+    def build(self):
+        warszawaH = self.addHost('h1')
+        warszawaS = self.addSwitch('s1')
+        madrytH = self.addHost('h2')
+        madrytS = self.addSwitch('s2')
+        wiedenH = self.addHost('h3')
+        wiedenS = self.addSwitch('s3')
+        kopenhagaH = self.addHost('h4')
+        kopenhagaS = self.addSwitch('s4')
+        londynH = self.addHost('h5')
+        londynS = self.addSwitch('s5')
+        rzymH = self.addHost('h6')
+        rzymS = self.addSwitch('s6')
+        paryzH = self.addHost('h7')
+        paryzS = self.addSwitch('s7')
+        berlinH = self.addHost('h8')
+        berlinS = self.addSwitch('s8')
+        budapesztH = self.addHost('h9')
+        budapesztS = self.addSwitch('s9')
+        pragaH = self.addHost('h10')
+        pragaS = self.addSwitch('s10')
+
+        self.addLink(warszawaH, warszawaS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(madrytH, madrytS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(wiedenH, wiedenS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(kopenhagaH, kopenhagaS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(londynH, londynS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(rzymH, rzymS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(paryzH, paryzS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(berlinH, berlinS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(pragaH, pragaS, delay='0.8ms', bw=1000, max_queue_size=300)
+        self.addLink(budapesztH, budapesztS, delay='0.8ms', bw=1000, max_queue_size=300)
+
+        self.addLink(warszawaS, berlinS, bw=10, delay='3.7ms', loss=0, max_queue_size=1000)
+        self.addLink(warszawaS, pragaS, bw=10, delay='3.7ms', loss=0, max_queue_size=1000)
+        self.addLink(warszawaS, wiedenS, bw=10, delay='3.9ms', loss=0, max_queue_size=1100)
+        self.addLink(berlinS, kopenhagaS, bw=10, delay='2.5ms', loss=0, max_queue_size=700)
+        self.addLink(berlinS, paryzS, bw=10, delay='6.2ms', loss=0, max_queue_size=1700)
+        self.addLink(paryzS, londynS, bw=10, delay='2.43ms', loss=0, max_queue_size=700)
+        self.addLink(paryzS, madrytS, bw=10, delay='7.5ms', loss=0, max_queue_size=2000)
+        self.addLink(wiedenS, budapesztS, bw=10, delay='1.5ms', loss=0, max_queue_size=400)
+        self.addLink(wiedenS, rzymS, bw=10, delay='5.4ms', loss=0, max_queue_size=1500)
+        self.addLink(warszawaS, budapesztS, bw=10, delay='3.8ms', loss=0, max_queue_size=1000)
+        self.addLink(budapesztS, rzymS, bw=10, delay='5.7ms', loss=0, max_queue_size=1600)
+        self.addLink(rzymS, madrytS, bw=10, delay='9.6ms', loss=0, max_queue_size=2600)
+        self.addLink(madrytS, londynS, bw=10, delay='8.9ms', loss=0, max_queue_size=2400)
+        self.addLink(londynS, kopenhagaS, bw=10, delay='6.7ms', loss=0, max_queue_size=1800)
+        self.addLink(kopenhagaS, warszawaS, bw=10, delay='4.7ms', loss=0, max_queue_size=1300)
+        self.addLink(pragaS, madrytS, bw=10, delay='12.6ms', loss=0, max_queue_size=3400)
+
+
+topos = {'mapa': (lambda: MyTopo())}

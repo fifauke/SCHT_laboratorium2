@@ -1,0 +1,17 @@
+
+Warszawa,Berlin,730
+Warszawa,Praga,730
+Warszawa,Wieden,786
+Berlin,Kopenhaga,502
+Berlin,Paryz,1241
+Paryz,Londyn,485
+Paryz,Madryt,1491
+Wieden,Budapeszt,303
+Wieden,Rzym,1082
+Warszawa,Budapeszt,771
+Budapeszt,Rzym,1143
+Rzym,Madryt,1930
+Madryt,Londyn,1792
+Londyn,Kopenhaga,1356
+Kopenhaga,Warszawa,953
+Praga,Madryt,2514
